@@ -526,6 +526,8 @@ body{
     left: 50%;
     transform: translate(-50%,-50%);
     background-color: #FCFCFC;
+
+    padding: 72px 24px 24px 24px;
 }
 
 .modal-close-button {
@@ -554,6 +556,40 @@ body{
 }
 
 .modal-close-svg{}
+
+/* ===modal form===  */
+
+.modal-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal-form- {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: center;
+
+    margin-bottom: 14px;
+}
+
+.modal-form-label {}
+
+.modal-form-desc {
+    display: block;
+}
+
+.modal-form-input {
+    width: 100%;
+}
+
+.modal-form-comment {}
+
+.modal-form-check {}
+
+.modal-form-user-policy {}
+
+.modal-form-button-send {}
 
 /* ---------------------------- */
  /* ---------portfolio--------- */
