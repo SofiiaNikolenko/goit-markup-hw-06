@@ -600,17 +600,27 @@ body{
 
     padding-left: 38px;
 
+    transition: border-color var(--transition-duration-and-func);
+}
+
+.modal-form-input:focus{
+    outline: none;
+    border-color: var(--iris-color);
 }
 
 .modal-form-label-svg{
     position: absolute;
     top: 50%;
     left: 16px;
-    transform: translateY(-50%)
+    transform: translateY(-50%);
+    transition: fill var(--transition-duration-and-func);
+}
+
+.modal-form-input:focus + .modal-form-label-svg{
+    fill: var(--iris-color);
 }
 
 .modal-form-comment {
-    color: rgba(117, 117, 117, 0.5);
     font-weight: 400;
     font-size: 12px;
     line-height: 1.3;
@@ -622,11 +632,23 @@ body{
     border-radius: 4px;
 
     padding-top: 8px;
+    padding-bottom: 8px;
     padding-left: 16px;
+    padding-right: 16px;
+
+    transition: border-color var(--transition-duration-and-func);
 }
 
-.modal-form-check {
+.modal-form-comment::placeholder{
+    color: rgba(117, 117, 117, 0.5);
 }
+
+.modal-form-comment:focus{
+    outline: none;
+    border-color: var(--iris-color);
+}
+
+.modal-form-check {}
 
 .modal-form-check-desc{
     color: #757575;
@@ -634,7 +656,32 @@ body{
     font-size: 12px;
     line-height: 1.3;
 
+    display: flex;
+    align-items: center;
+    
     margin-bottom: 14px;
+}
+
+.modal-form-check-desc::before{
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 1.25px solid var(--navyblue-color);
+    border-radius: 2px;
+
+    margin-right: 8px;
+
+    transition: background-color var(--transition-duration-and-func),
+        background-image var(--transition-duration-and-func);
+}
+
+.modal-form-check:checked + .modal-form-check-desc::before{
+    background-color: var(--ocean-color);
+    background-image: url(../images/check-mark.svg);
+    background-repeat: no-repeat;
+    background-size: 10px 8px;
+    background-position: center;
 }
 
 .modal-form-user-policy {
@@ -642,7 +689,33 @@ body{
     text-decoration: underline;    
 }
 
-.modal-form-button-send {}
+.modal-form-button-send {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.3;
+
+    align-self: center;
+    width: 169px;
+    height: 56px;
+
+    background-color: var(--iris-color);
+    color: var(--neutral-color);
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+
+    transition: background-color var(--transition-duration-and-func),
+        box-shadow var(--transition-duration-and-func);
+
+    padding: 16px 32px;
+}
+
+.modal-form-button-send:hover,
+.modal-form-button-send:focus{
+    background-color: var(--ocean-color);
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
 
 /* ---------------------------- */
  /* ---------portfolio--------- */
