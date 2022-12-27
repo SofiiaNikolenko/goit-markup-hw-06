@@ -556,6 +556,12 @@ body{
     border: none;
 
     padding: 8px 64px 8px 24px;
+
+    transition: background-color var(--transition-duration-and-func);
+}
+
+.footer-form-button:active{
+    background-color: var(--ocean-color);
 }
 
 .footer-form-button-icon {
@@ -787,7 +793,7 @@ body{
 .modal-form-button-send:hover,
 .modal-form-button-send:focus{
     background-color: var(--ocean-color);
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
 /* ---------------------------- */
